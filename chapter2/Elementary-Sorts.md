@@ -116,3 +116,51 @@ public class Exmaple
 
 该算法不断地 selecting the smallest remaining item，因此被称为 Selection Sort。
 
+其实现如下：
+
+```Java
+public class Selection {
+    public static void sort(Comparable[] a) {
+        int N = a.length;
+
+        for (int i = 0; i < N; i++) {
+            /**
+             * 将 a[i] 与 a[i->N] 中的最小值交换
+             */
+            int min = i;
+            for (int j = i; j < N; j++) {
+                if (less(a[j], a[min])) min = j;
+            }
+
+            exch(a, i, min);
+        }
+    }
+}
+```
+
+* 内层循环：查找 `a[i] -> a[N]` 中的最小值；
+* 外层循环：将 `a[i]` 与 `a[min]` 交换，交换后 `a[min]` 到达其 **最终位置**；
+
+因此选择排序中：
+
+* exchange 数量为 N
+* compare 数量为 N^2/2
+
+选择排序易于理解、实现，且具备如下显著特点：
+
+1. Running time is **insensitive** to input.
+  * 每次最小值查找相互独立，无法给下次查找提供有用信息，从而导致以下 3 种场景 **耗时相同**：
+    + 随机顺序数组
+    + **已排序** 数组
+    + **所有 key 相等** 的数组
+2. Data movement is minimal.
+  * 只需要 N 次交换
+  
+## Insertion Sort
+
+
+
+
+
+
+
