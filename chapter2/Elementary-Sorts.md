@@ -148,13 +148,13 @@ public class Selection {
 
 选择排序易于理解、实现，且具备如下显著特点：
 
-1. Running time is **insensitive** to input.
-  * 每次最小值查找相互独立，无法给下次查找提供有用信息，从而导致以下 3 种场景 **耗时相同**：
-    + 随机顺序数组
-    + **已排序** 数组
-    + **所有 key 相等** 的数组
-2. Data movement is minimal.
-  * 只需要 N 次交换
+* Running time is **insensitive** to input.
+  + 每次最小值查找相互独立，无法给下次查找提供有用信息，从而导致以下 3 种场景 **耗时相同**：
+    - 随机顺序数组
+    - **已排序** 数组
+    - **所有 key 相等** 的数组
+* Data movement is minimal.
+  + 只需要 N 次交换
   
 ## Insertion Sort
 
